@@ -1,0 +1,74 @@
+@keyframes LogoAnim {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes href2 {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes href1 {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    85% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    95% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes avatar {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes wheelBlock {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

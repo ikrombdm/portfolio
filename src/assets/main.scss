@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$im-color: #FF4E05;
+$main-bg: #10233B;
+$main-txt: #eee;
+
+
+* {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $main-bg;
+    font-weight: 550;
+}
+
+
+ul {
+    list-style: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+// MAIN COLOR
+.im-color {
+    color: $im-color !important;
+}
+
+// TITLE LINE
+.-title {
+    position: relative;
+    font-size: 2.5rem;
+    color: #fff;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 2.5px;
+        left: -50px;
+        top: 26px;
+        width: 40px;
+        background: #fff;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .-title {
+        width: 100%;
+        text-align: center;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 2.5px;
+            left: 0px;
+            top: 30px;
+            width: 100%;
+            background: #fff;
+            z-index: -2;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background: #10233B;
+            z-index: -1;
+        }
+    }
+}
+
+
+
+// SCROLL THUMB
+::-webkit-scrollbar {
+    background: $main-bg;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:  #99b7c8;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5ca6d1;
+    border-radius: 15px;
+}
+
+// SELECTIONS
+::selection{
+    color: #000;
+    background: #FF4E05;
+    letter-spacing: 1px;
+}
+
+
+
+.extra-link {
+    position: relative;
+    color: #ccc;
+
+    &:after {
+        position: absolute;
+        content: "";
+        height: 6px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: #FF4E05;
+        z-index: -1;
+        transition: 0.2s ease-in;
+    }
+
+    &:hover:after {
+        height: 100%;
+    }
+}
+
+
+#g-cursor {
+    position: fixed;
+    z-index: 20;
+}
+
+.g-cursor {
+    &_hide {
+        opacity: 0;
+        width: 80px;
+        height: 80px;
+        transition: width .3s ease,
+            height .3s ease,
+            opacity .3s ease;
+    }
+
+    &__circle {
+        pointer-events: none;
+        user-select: none;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $im-color;
+        border-radius: 100%;
+        z-index: 5555;
+        backface-visibility: hidden;
+        transition: opacity .6s ease;
+        z-index: 9999;
+    }
+
+    &__circle2 {
+        pointer-events: none;
+        user-select: none;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 48px;
+        height: 48px;
+        background: #f8f8f804;
+        backdrop-filter: blur(10px) saturate(100%);
+        border-radius: 100%;
+        z-index: 5555;
+        backface-visibility: hidden;
+        transition: opacity .6s ease;
+        z-index: 9999;
+    }
+
+    &__point {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 10px !important;
+        height: 10px !important;
+        pointer-events: none;
+        user-select: none;
+        border-radius: 100%;
+        background: $main-txt;
+        z-index: 55555555;
+        backface-visibility: hidden;
+        will-change: transform;
+    }
+
+
+}

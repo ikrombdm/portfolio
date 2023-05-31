@@ -1,0 +1,137 @@
+@media screen and (max-width: 1100px) {
+    .main-content {
+        padding: 0 2rem;
+    }
+
+    nav {
+        padding: 1rem !important;
+    }
+
+    .im-home {
+        &::after {
+            left: -20% !important;
+            bottom: -20% !important;
+            width: 280px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #g-cursor {
+        position: fixed;
+        z-index: 20;
+        display: none;
+    }
+    // NAVIGATION
+    nav {
+        .im-links {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -60px;
+            height: 60px;
+            background: #000;
+            align-items: center !important;
+            overflow: scroll;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .links {
+            opacity: 1;
+        }
+
+        .im-links::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .im-menu {
+            display: inline !important;
+        }
+    }
+
+    // PROJECTS
+    .im-projects {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    // PROJECTS
+    section .im-about-skills {
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        justify-content: space-between;
+    }
+
+    .im-about-skills .im-info {
+        max-width: 100% !important;
+    }
+
+    .im-services-section {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .im-about-section {
+        flex-direction: column;
+        gap: 3rem !important;
+    }
+
+    .txt {
+        &::after {
+            top: -22px !important;
+            left: 50% !important;
+            transform: rotate(90deg) translateX(-55%);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    // PROJECTS
+    .im-projects {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    // PROJECTS
+    .im-cv a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 210px !important;
+        height: 210px !important;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    section {
+        .im-projects {
+            .im-project-item {
+                width: 100%;
+                padding: 1.2rem;
+                background: rgba(0, 0, 0, 0.1333333333);
+                border-radius: 2rem !important;
+
+                .web-image {
+                    img {
+                        border-radius: 2rem !important;
+                        border-bottom-right-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        width: 100%;
+                        max-height: 200px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
