@@ -19,7 +19,6 @@ body {
     font-weight: 550;
 }
 
-
 ul {
     list-style: none !important;
 }
@@ -100,9 +99,8 @@ a {
 
 // SELECTIONS
 ::selection{
-    color: #fff;
-    background: crimson !important;
-    letter-spacing: 1px;
+    color: #000000;
+    background: #ffffff !important;
 }
 
 

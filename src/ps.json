@@ -1,0 +1,54 @@
+[
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/ag-nasiya.png?token=GHSAT0AAAAAACCNMUGTGSZACM3J2LC4T5KUZD4FOGQ",
+        "title": "Allgood - Nasiya",
+        "content": "Built a merchant AG-Nasiya and dashboard pages for Allgood's e-commerce site from scratch",
+        "live": "https://allgoodnasiya.uz/",
+        "demo": ""
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/allgood-merchant.png?token=GHSAT0AAAAAACCNMUGT6ZL5FP7S3LFTNFQWZD4FOWQ",
+        "title": "Allgood - merchant",
+        "content": "Lighthouse score reached 100 and was increased by 85% for desktop and by a 100% for mobile.",
+        "live": "https://merchant.allgood.uz/",
+        "demo": ""
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/chayxanshik.png?token=GHSAT0AAAAAACCNMUGTZK6LMO55NS2EZCOGZD4FPOQ",
+        "title": "Chayxanshik",
+        "content": "Restaurant app built with HTML, CSS, JavaScript and with SCRUM methodology",
+        "live": "https://chayxanshik.uz/",
+        "demo": ""
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/landburger.png?token=GHSAT0AAAAAACCNMUGSU6ZXA3HTOJ22NWHMZD4FQAQ",
+        "title": "Landburger Cafe",
+        "content": "Architected producttours with Vue for a new feature that improved customer adoption",
+        "live": "https://landburgermenu.netlify.app/",
+        "demo": "https://github.com/ikrombdm/landburgervueapp"
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/hmg.png?token=GHSAT0AAAAAACCNMUGS2R4DVXD3JO6TJBIEZD4FP3A",
+        "title": "HMGame",
+        "content": "Created HMG (Hit mouse game) with vanilla JavaScript",
+        "live": "https://hitmg.netlify.app/",
+        "demo": "https://github.com/ikrombdm/hit-mouse-game-hmg"
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/amodent.png?token=GHSAT0AAAAAACCNMUGSBLCYLMPCD2SP65LOZD4FO5Q",
+        "title": "Amodent",
+        "content": "Multilingual Landing page built with front-end tools, Storyblok and ahost. Increased web performance and SEO.",
+        "live": "https://amodent.uz/",
+        "demo": ""
+    },
+    {
+        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/portfolio.png?true",
+        "title": "Portfolio",
+        "content": "Multilingual Landing page built with front-end tools, Storyblok and ahost. Increased web performance and SEO.",
+        "live": "https://amodent.uz/",
+        "demo": ""
+    }
+
+
+    
+]

@@ -133,8 +133,8 @@ export default {
         navLi.classList.add("active")
       }
     };
-    
-    
+
+
 
     const hovered_me = document.querySelectorAll("a");
 
@@ -186,8 +186,9 @@ header {
 
   &.onScroll {
     background: transparent;
-    box-shadow: 0 10px 1.5rem #10233b82;
-    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 1.5rem #10233bc8;
+    backdrop-filter: blur(15px) saturate(100%);
+    background: #10233bc1;
   }
 
 }

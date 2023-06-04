@@ -6,7 +6,9 @@
         <!-- === = PROJECTS = === -->
         <div class="im-projects">
 
-            <div class="im-project-item" v-for="project in projects" :key="project.id">
+            <div data-aos="fade-up" data-aos-once="true" data-aos-delay="200"
+             data-aos-anchor-placement="top-bottom" class="im-project-item"
+                v-for="project in projects" :key="project.id">
 
                 <div class="web-image">
                     <img v-if="project.primg" class="image-item" :src="project.primg">
@@ -70,13 +72,13 @@
 
         <!-- === = BRAND = === -->
 
-        <!-- <div class="im-my-projects-brand">
+        <div class="im-my-projects-brand">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
-        </div> -->
+        </div>
 
         <!-- === = END BRAND = === -->
 
@@ -131,7 +133,7 @@
 </template>
 
 <script>
-import projects from "./ps.json"
+import projects from "@/ps.json"
 import noImage from "@/assets/svg/no-image.svg"
 
 export default {
@@ -267,7 +269,6 @@ section {
         height: 130px;
         border-radius: 20px;
         border: 2px solid #000;
-        box-shadow: 0 5px 10px #eeeeee3e;
 
         img {
             height: 50%;
@@ -276,14 +277,7 @@ section {
 
     .im-my-projects-brand::-webkit-scrollbar {
         width: 0;
-        height: 8px;
-        background: #eeeeee18;
-        border-radius: 50px;
-    }
-
-    .im-my-projects-brand::-webkit-scrollbar-thumb {
-        background: #eeeeee55;
-        border-radius: 50px;
+        height: 0;
     }
 
 
