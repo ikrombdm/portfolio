@@ -89,16 +89,17 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background:  #99b7c8;
+    background: #99b7c8;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #5ca6d1;
     border-radius: 15px;
 }
 
 // SELECTIONS
-::selection{
+::selection {
     color: #000000;
     background: #ffffff !important;
 }

@@ -14,7 +14,7 @@
         <ul class="im-socials">
 
           <li>
-            <a href="https://t.me/peculiarofplaceofpeculiarworld" target="_blank">
+            <a href="https://t.me/ikrombdm" target="_blank">
               <img :src="telegram" alt="">
               <img :src="telegram" alt="">
             </a>

@@ -6,9 +6,8 @@
         <!-- === = PROJECTS = === -->
         <div class="im-projects">
 
-            <div data-aos="fade-up" data-aos-once="true" data-aos-delay="200"
-             data-aos-anchor-placement="top-bottom" class="im-project-item"
-                v-for="project in projects" :key="project.id">
+            <div data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-anchor-placement="top-bottom"
+                class="im-project-item" v-for="project in projects" :key="project.id">
 
                 <div class="web-image">
                     <img v-if="project.primg" class="image-item" :src="project.primg">
@@ -71,14 +70,14 @@
 
 
         <!-- === = BRAND = === -->
-
+        <!-- 
         <div class="im-my-projects-brand">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
             <img src="https://allgoodnasiya.uz/assets/images/allgood_imgs/Logo_final.png" alt="">
-        </div>
+        </div> -->
 
         <!-- === = END BRAND = === -->
 
