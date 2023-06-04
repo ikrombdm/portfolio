@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "pinia": "^2.0.36",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",

@@ -8,7 +8,7 @@
           <img :src="avatar">
         </div>
         <div class="im-name">
-          <h1>Ikrombek Urazaliyev</h1>
+          <h1>Ikrom Urazaliyev</h1>
           <p>I am a <span class="im-color">web developer</span></p>
         </div>
         <ul class="im-socials">
@@ -26,9 +26,9 @@
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/@letsmailikrombek" target="_blank">
-              <img :src="youtube" alt="">
-              <img :src="youtube" alt="">
+            <a href="https://codepen.io/ikrombdm" target="_blank">
+              <img :src="codepen" alt="">
+              <img :src="codepen" alt="">
             </a>
           </li>
           <li>
@@ -42,7 +42,6 @@
       <a href="#about" class="im-mouse"></a>
     </div>
     <!-- ==== END HOME SIDE ==== -->
-
 
 
 
@@ -67,17 +66,24 @@
 
 
 
-
     <!-- ==== SERVICES SIDE ==== -->
     <div class="im-services">
       <Services></Services>
     </div>
     <!-- ==== END SERVICES SIDE ==== -->
 
-    <div class="im-cv">
-      <a href="#">
-        <h1><span class="im-color">C</span>urriculum</h1>
-        <h1><span class="im-color">V</span>itae</h1>
+    <div class="im-cv" data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+      <a :href="cv" target="_blank">
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom" data-aos-delay="100">
+          <span class="im-color">C</span>urriculum
+        </h1>
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom" data-aos-delay="200"><span
+            class="im-color">V</span>itae</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+        </svg>
       </a>
     </div>
 
@@ -92,8 +98,9 @@
 import instagram from "@/assets/svg/instagram.svg";
 import github from "@/assets/svg/github.svg";
 import linkedin from "@/assets/svg/linkedin.svg";
-import youtube from "@/assets/svg/youtube.svg";
+import codepen from "@/assets/svg/codepen.svg";
 import telegram from "@/assets/svg/telegram.svg";
+import cv from "@/assets/CV_Ikrom_Urazaliyev_en.pdf";
 // ===== IMAGES =====
 import avatar from "@/assets/image/avatar.png";
 
@@ -113,12 +120,16 @@ export default {
     return {
       github,
       linkedin,
-      youtube,
+      codepen,
       telegram,
       instagram,
-      avatar
+      avatar,
+      cv
 
     }
+  },
+  mounted() {
+
   }
 }
 </script>
@@ -133,7 +144,7 @@ export default {
 
 
 
-// ==== BOTTOM CV  ==== 
+// ==== BOTTOM CV  ====
 
 .im-cv {
   margin-top: 20rem;
@@ -146,14 +157,40 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 280px;
-    height: 280px;
-    background: #fff;
+    width: 250px;
+    height: 250px;
+    background: #ccc;
     border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+      background: #eee;
+    }
+
+    &:hover h1 {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    &:hover svg {
+      opacity: 1;
+      transition: 0.8s;
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      color: #FF4E05;
+      opacity: 0;
+      transition: 0.5s;
+    }
 
     h1 {
       text-align: center;
       color: #000;
+      transition: 0.5s;
     }
   }
 }
@@ -188,6 +225,7 @@ export default {
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
+        user-select: none !important;
       }
     }
 
@@ -196,8 +234,8 @@ export default {
       text-align: center;
 
       h1 {
-        font-size: 1.4rem;
-        margin-bottom: 0.4rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
         animation: avatar 1.7s ease-in !important;
       }
 
@@ -282,10 +320,11 @@ export default {
     height: 33px;
     width: 27px;
     border: 2px solid #eee;
-    bottom: 30px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
+    transition: .1s ease-in-out;
     animation: wheelBlock 4.2s ease-out;
 
     &:after {
@@ -313,6 +352,11 @@ export default {
         background: #FF4E05;
       }
     }
+
+    &:active {
+      opacity: 0;
+    }
+
   }
 }
 </style>

@@ -22,33 +22,34 @@
         z-index: 20;
         display: none;
     }
+
+
     // NAVIGATION
-    nav {
-        .im-links {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            bottom: -60px;
-            height: 60px;
-            background: #000;
-            align-items: center !important;
-            overflow: scroll;
-            opacity: 0;
-            transition: 0.3s ease;
-        }
+    .im-links {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -60px;
+        height: 60px;
+        background: #000;
+        align-items: center !important;
+        overflow: scroll;
+        transition: 0.3s ease;
+        opacity: 0;
+    }
 
-        .links {
-            opacity: 1;
-        }
+    .links {
+        opacity: 1;
+    }
 
-        .im-links::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
 
-        .im-menu {
-            display: inline !important;
-        }
+    .im-links::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .im-menu {
+        display: inline !important;
     }
 
     // PROJECTS

@@ -120,22 +120,32 @@ export default {
 
   // BEFOREMOUNT
   beforeMount() {
-    console.log(this.view)
     window.addEventListener('scroll', this.handleScroll);
   },
 
   // MOUNTED
   mounted() {
+    const navLi = document.querySelector("nav ul li a");
 
-    const ahref = document.querySelectorAll('a')
-    ahref.forEach(aa => {
-      aa.addEventListener('mouseenter', () => {
+    window.onscroll = () => {
+      navLi.classList.remove("active")
+      if (window.pageYOffset < 550) {
+        navLi.classList.add("active")
+      }
+    };
+    
+    
+
+    const hovered_me = document.querySelectorAll("a");
+
+    hovered_me.forEach(hovereds_me => {
+      hovereds_me.addEventListener('mouseenter', () => {
         this.hover = true;
         this.hideCursor = true;
       });
     });
-    ahref.forEach(aa => {
-      aa.addEventListener('mouseleave', () => {
+    hovered_me.forEach(hovereds_me => {
+      hovereds_me.addEventListener('mouseleave', () => {
         this.hover = false;
         this.hideCursor = false;
       })
@@ -154,7 +164,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 footer {
   text-align: center;
@@ -172,12 +181,13 @@ header {
   position: fixed;
   width: 100%;
   border-top: 3px solid #FF4E05;
-  transition: .2s ease-in;
+  transition: .4s ease;
   z-index: 10;
 
   &.onScroll {
-    background: #00000022;
-    backdrop-filter: blur(20px) saturate(100%);
+    background: transparent;
+    box-shadow: 0 10px 1.5rem #10233b82;
+    backdrop-filter: blur(15px);
   }
 
 }
@@ -190,6 +200,7 @@ header {
   transform: rotate(90deg);
   animation: act 1.2s ease-out;
   cursor: pointer;
+  z-index: 22;
 
   &::after {
     position: absolute;

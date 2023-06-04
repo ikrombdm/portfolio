@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="sider">
+    <section id="projects" class="main-section sider">
         <h1 class="-title"><span class="im-color">P</span>rojects</h1>
 
 
@@ -7,10 +7,13 @@
         <div class="im-projects">
 
             <div class="im-project-item" v-for="project in projects" :key="project.id">
+
                 <div class="web-image">
-                    <img v-if="project.image" class="image-item" :src="project.image">
+                    <img v-if="project.primg" class="image-item" :src="project.primg">
                     <img v-else class="else-image" :src="noImage">
                 </div>
+
+
                 <div class="web-contents">
                     <h2>{{ project.title }}</h2>
                     <article>
@@ -18,7 +21,7 @@
                     </article>
 
                     <div class="links">
-                        <a :href="project.live" target="_blank">
+                        <a v-if="project.live" :href="project.live" target="_blank">
                             <p>Live</p>
 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -28,7 +31,16 @@
                             </svg>
 
                         </a>
-                        <a :href="project.demo" target="_blank">
+                        <a v-else>
+                            <p>Demo</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                            </svg>
+                        </a>
+
+                        <a v-if="project.demo" :href="project.demo" target="_blank">
                             <p>Demo</p>
 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -37,6 +49,14 @@
                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                             </svg>
 
+                        </a>
+                        <a v-else>
+                            <p>Demo</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -68,22 +88,23 @@
         <div class="im-about-skills">
             <div class="im-info">
                 <div class="txt">
-                    <h2>My first job as a front-end developer began in summer of 2021. Since then, I've been building:</h2>
-                    <p>
+                    <h2 data-aos-once="true" data-aos="fade-right" data-aos-delay="100">My first job as a front-end
+                        developer began in summer of 2021. Since then, I've been building:</h2>
+                    <p data-aos-once="true" data-aos="fade-right" data-aos-delay="100">
                         Single page applications (SPAs) with vue js following a reactive and declarative pattern using RxJs.
                     </p>
-                    <p>
+                    <p data-aos-once="true" data-aos="fade-right" data-aos-delay="150">
                         JAMstack sites built with Nuxt.js (Vue.js framework), Storyblok as content management system (CMS)
                         and Netlify deployment in order to obtain the best web performance and lighthouse scores.
                     </p>
-                    <p>
+                    <p data-aos-once="true" data-aos="fade-right" data-aos-delay="200">
                         Outside of programming I have a passion for
                         <a href="https://www.pexels.com/@ikrombek-540243926/" class="extra-link"
                             target="_blank">photography</a> since I was a teenager.
                     </p>
                 </div>
             </div>
-            <div class="progress-section">
+            <div class="progress-section" data-aos="fade-left" data-aos-once="true">
                 <div class="task-progress">
                     <p>Frontend
                         <span>80%</span>
@@ -110,11 +131,11 @@
 </template>
 
 <script>
-import projects from "@/projects.json"
+import projects from "./ps.json"
 import noImage from "@/assets/svg/no-image.svg"
 
 export default {
-    data() {
+    setup() {
         return {
             projects,
             noImage
@@ -141,44 +162,51 @@ section {
         .im-project-item {
             width: 100%;
             padding: 1.2rem 1.2rem 1rem 1.2rem;
-            background: #00000022;
+            background: #00000044;
             border-radius: 3rem;
+            transition: 0.2s ease-in;
+
+            // &:hover {
+            //     transform: translateY(-5px);
+            // }
 
             .web-image {
+                position: relative;
                 width: 100%;
+                max-height: 160px;
+                margin-bottom: 0.2rem;
 
                 img {
                     border-radius: 2.5rem;
+                    height: 160px;
                     border-bottom-right-radius: 10px;
                     border-bottom-left-radius: 10px;
                     width: 100%;
-                    max-height: 180px;
                     object-fit: cover;
+                    user-select: none;
                 }
-
             }
-
 
 
             .web-contents {
                 h2 {
                     color: #FF4E05;
-                    margin-bottom: 0.2rem;
+                    margin-top: 0.2rem;
                 }
 
                 article {
                     position: relative;
                     margin-bottom: 0.5rem;
-                    max-height: 80px;
-                    height: 80px;
+                    max-height: 100px;
+                    height: 100px;
                     overflow: scroll;
+                    line-height: 25px;
                     color: #eee;
-                    padding-bottom: 2rem;
                     border-bottom: 0.1px dotted #eeeeee11;
                 }
 
                 article::-webkit-scrollbar {
-                    width: 10px;
+                    width: 0;
                     height: 0 !important;
                     background: transparent;
                 }
@@ -273,10 +301,10 @@ section {
             max-width: 45%;
 
             .txt {
-                
+
 
                 h2 {
-                    color: #ff9c72;
+                    color: #FF4E05;
                     margin-bottom: 1.5rem;
                     font-size: 1.2rem;
                 }

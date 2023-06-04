@@ -1,20 +1,32 @@
 <template>
-    <section id="services" class="sider">
+    <section id="services" class="xy main-section sider">
         <h1 class="-title"><span class="im-color">S</span>ervices</h1>
 
 
-        <div class="im-services-section">
+        <div class="im-services-section" data-aos-once="true" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <Tilt class="box">
-                <h1>Frontend</h1>
-                <p>development</p>
+                <div>
+                    <h1 data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="100">Frontend</h1>
+                    <p data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="200">development</p>
+                </div>
             </Tilt>
             <Tilt class="box">
-                <h1>Backend</h1>
-                <p>development</p>
+                <div>
+                    <h1 data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="100">Backend</h1>
+                    <p data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="200">development</p>
+                </div>
             </Tilt>
             <Tilt class="box">
-                <h1>UI/UX</h1>
-                <p>Designs</p>
+                <div>
+                    <h1 data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="100">UI/UX</h1>
+                    <p data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="200">Designs</p>
+                </div>
             </Tilt>
         </div>
 
@@ -45,10 +57,15 @@ section {
             min-width: 200px;
             background: #fff;
             border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+
+            div {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
 
             h1 {
                 color: #FF4E05;
