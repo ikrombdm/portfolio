@@ -28,13 +28,6 @@
         "demo": "https://github.com/ikrombdm/landburgervueapp"
     },
     {
-        "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/hmg.png?token=GHSAT0AAAAAACCNMUGS2R4DVXD3JO6TJBIEZD4FP3A",
-        "title": "HMGame",
-        "content": "Created HMG (Hit mouse game) with vanilla JavaScript",
-        "live": "https://hmgame.netlify.app/",
-        "demo": "https://github.com/ikrombdm/hit-mouse-game-hmg"
-    },
-    {
         "primg": "https://raw.githubusercontent.com/ikrombdm/data-for-image/main/amodent.png?token=GHSAT0AAAAAACCNMUGSBLCYLMPCD2SP65LOZD4FO5Q",
         "title": "Amodent",
         "content": "Multilingual Landing page built with front-end tools, Storyblok and ahost. Increased web performance and SEO.",
