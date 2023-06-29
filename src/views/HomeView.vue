@@ -20,9 +20,9 @@
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ikrombdm/" target="_blank">
-              <img :src="instagram" alt="">
-              <img :src="instagram" alt="">
+            <a href="https://github.com/ikrombdm/" target="_blank">
+              <img :src="github" alt="">
+              <img :src="github" alt="">
             </a>
           </li>
           <li>
@@ -87,6 +87,7 @@
       </a>
     </div>
 
+
   </main>
 </template>
 
@@ -101,6 +102,9 @@ import linkedin from "@/assets/svg/linkedin.svg";
 import codepen from "@/assets/svg/codepen.svg";
 import telegram from "@/assets/svg/telegram.svg";
 import cv from "@/assets/CV_Ikrom_Urazaliyev_en.pdf";
+
+
+import cta from "@/assets/image/cta.png";
 // ===== IMAGES =====
 import avatar from "@/assets/image/avatar.png";
 
@@ -124,7 +128,8 @@ export default {
       telegram,
       instagram,
       avatar,
-      cv
+      cv,
+      cta
 
     }
   },
@@ -141,17 +146,27 @@ export default {
 <style lang="scss" scoped>
 // ==== ABOUT SIDE  ==== 
 
-
-
-
 // ==== BOTTOM CV  ====
-
 .im-cv {
+  position: relative;
   margin-top: 20rem;
   margin-bottom: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -14rem;
+    width: 99.5vw;
+    height: 100vh;
+    background: url(../assets/image/cta.png) no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+  }
+
 
   a {
     display: flex;
@@ -159,7 +174,8 @@ export default {
     justify-content: center;
     width: 250px;
     height: 250px;
-    background: #ccc;
+    background: #cccccc99;
+    backdrop-filter: blur(10px) saturate(100%);
     border-radius: 50%;
     transition: 0.5s;
 
@@ -203,7 +219,7 @@ export default {
 
 
   .home-section {
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,7 +270,7 @@ export default {
         position: relative;
         width: 38px;
         height: 38px;
-        padding: 8px !important;
+        padding: 10px !important;
         background: #eeeeee0d;
         display: flex;
         justify-content: center;
@@ -265,17 +281,22 @@ export default {
 
 
         &:hover {
-          background: #cccccc;
+          background: #cccccc51;
           box-shadow: 0 5px 15px #00000022;
 
           img {
-            filter: none;
+            // filter: none;
             margin-right: -100px;
           }
 
           img:nth-child(2) {
             margin-right: 0 !important;
           }
+        }
+
+        &:active {
+          transform: scale(0.9) !important;
+          transition: 0s !important;
         }
 
         img {
@@ -320,7 +341,7 @@ export default {
     height: 33px;
     width: 27px;
     border: 2px solid #eee;
-    bottom: 70px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;

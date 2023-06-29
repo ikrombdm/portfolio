@@ -26,7 +26,9 @@ ul {
 a {
     text-decoration: none;
 }
-
+a:active{
+    opacity: 0.8;
+}
 // MAIN COLOR
 .im-color {
     color: $im-color !important;
@@ -146,13 +148,13 @@ a {
     &__circle {
         pointer-events: none;
         user-select: none;
-        top: 0;
-        left: 0;
+        top: -11px;
+        left: -11px;
         position: fixed;
-        width: 30px;
-        height: 30px;
+        width: 55px;
+        height: 55px;
         border: 2px solid $im-color;
-        border-radius: 100%;
+        border-radius: 50rem;
         z-index: 5555;
         backface-visibility: hidden;
         transition: opacity .6s ease;

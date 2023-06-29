@@ -18,10 +18,10 @@
       <div :style="cursorCircle2" class="g-cursor__circle2"></div>
     </div>
 
-
-
     <footer>
-      <p>© 2023 | Ikrombek Urazaliyev</p>
+      <p>© 2023 | Ikrombek Urazaliyev
+        <!-- <span>شُكْرًا كَثِيْرً</span> -->
+      </p>
     </footer>
   </main>
 </template>
@@ -144,6 +144,7 @@ export default {
         this.hideCursor = true;
       });
     });
+
     hovered_me.forEach(hovereds_me => {
       hovereds_me.addEventListener('mouseleave', () => {
         this.hover = false;
@@ -170,6 +171,8 @@ footer {
   padding: 1.5rem;
   border-top: 1px solid #ffffff28;
   color: #eee;
+  backdrop-filter: blur(15px) saturate(100%);
+  background: #16243c6a;
 }
 
 .main-content {
@@ -188,7 +191,7 @@ header {
     background: transparent;
     box-shadow: 0 10px 1.5rem #10233bc8;
     backdrop-filter: blur(15px) saturate(100%);
-    background: #10233bc1;
+    background: #16243c6a;
   }
 
 }
