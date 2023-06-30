@@ -52,7 +52,7 @@ export default {
       hideCursor: true,
 
       view: {
-        topOfPage: true,
+        topOfPage: false,
       },
       imAbove: false,
     }
@@ -74,94 +74,94 @@ export default {
       }
     },
 
-    // CURSOR 
-    moveCursor(e) {
-      this.xChild = e.clientX;
-      this.yChild = e.clientY;
-      setTimeout(() => {
-        this.xParent = e.clientX - 14.5;
-        this.yParent = e.clientY - 14.5;
-      }, 50);
-      setTimeout(() => {
-        this.xParentLarge = e.clientX - 22;
-        this.yParentLarge = e.clientY - 22;
-      }, 20);
-    }
+    // // CURSOR 
+    // moveCursor(e) {
+    //   this.xChild = e.clientX;
+    //   this.yChild = e.clientY;
+    //   setTimeout(() => {
+    //     this.xParent = e.clientX - 14.5;
+    //     this.yParent = e.clientY - 14.5;
+    //   }, 50);
+    //   setTimeout(() => {
+    //     this.xParentLarge = e.clientX - 22;
+    //     this.yParentLarge = e.clientY - 22;
+    //   }, 20);
+    // }
   },
 
 
   // COMPUTED
-  computed: {
-    cursorCircle() {
-      return `transform: translateX(${this.xParent}px)
-      translateY(${this.yParent}px)
-      translateZ(0)
-      translate3d(0, 0, 0)
-      scale(0.5);
-      `
-    },
+  // computed: {
+  //   cursorCircle() {
+  //     return `transform: translateX(${this.xParent}px)
+  //     translateY(${this.yParent}px)
+  //     translateZ(0)
+  //     translate3d(0, 0, 0)
+  //     scale(0.5);
+  //     `
+  //   },
 
-    cursorCircle2() {
-      return `transform: translateX(${this.xParentLarge}px)
-      translateY(${this.yParentLarge}px)
-      translateZ(0)
-      translate3d(0, 0, 0)
-      scale(0.5);
-      `
-    },
-    cursorPoint() {
-      return `transform:
-      translateX(${this.xChild - 3}px)
-      translateY(${this.yChild - 3}px)
-      translateZ(0)
-      translate3d(0, 0, 0);`
-    }
-  },
+  //   cursorCircle2() {
+  //     return `transform: translateX(${this.xParentLarge}px)
+  //     translateY(${this.yParentLarge}px)
+  //     translateZ(0)
+  //     translate3d(0, 0, 0)
+  //     scale(0.5);
+  //     `
+  //   },
+  //   cursorPoint() {
+  //     return `transform:
+  //     translateX(${this.xChild - 3}px)
+  //     translateY(${this.yChild - 3}px)
+  //     translateZ(0)
+  //     translate3d(0, 0, 0);`
+  //   }
+  // },
+  // MOUNTED
+  // mounted() {
+  //   const navLi = document.querySelector("nav ul li a");
+
+  //   window.onscroll = () => {
+  //     navLi.classList.remove("active")
+  //     if (window.pageYOffset < 550) {
+  //       navLi.classList.add("active")
+  //     }
+  //   };
+
+
+
+  //   const hovered_me = document.querySelectorAll("a");
+
+  //   hovered_me.forEach(hovereds_me => {
+  //     hovereds_me.addEventListener('mouseenter', () => {
+  //       this.hover = false;
+  //       this.hideCursor = false;
+  //     });
+  //   });
+
+  //   hovered_me.forEach(hovereds_me => {
+  //     hovereds_me.addEventListener('mouseleave', () => {
+  //       this.hover = false;
+  //       this.hideCursor = false;
+  //     })
+  //   })
+
+  //   document.addEventListener("mousemove", this.moveCursor);
+  //   document.addEventListener('mouseleave', e => {
+  //     this.hideCursor = false;
+  //   });
+  //   document.addEventListener('mouseenter', e => {
+  //     this.hideCursor = true;
+  //   });
+
+
+  // },
 
   // BEFOREMOUNT
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
   },
 
-  // MOUNTED
-  mounted() {
-    const navLi = document.querySelector("nav ul li a");
-
-    window.onscroll = () => {
-      navLi.classList.remove("active")
-      if (window.pageYOffset < 550) {
-        navLi.classList.add("active")
-      }
-    };
-
-
-
-    const hovered_me = document.querySelectorAll("a");
-
-    hovered_me.forEach(hovereds_me => {
-      hovereds_me.addEventListener('mouseenter', () => {
-        this.hover = true;
-        this.hideCursor = true;
-      });
-    });
-
-    hovered_me.forEach(hovereds_me => {
-      hovereds_me.addEventListener('mouseleave', () => {
-        this.hover = false;
-        this.hideCursor = false;
-      })
-    })
-
-    document.addEventListener("mousemove", this.moveCursor);
-    document.addEventListener('mouseleave', e => {
-      this.hideCursor = true;
-    });
-    document.addEventListener('mouseenter', e => {
-      this.hideCursor = false;
-    });
-
-
-  },
 }
 </script>
 

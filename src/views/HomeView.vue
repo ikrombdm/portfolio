@@ -20,7 +20,8 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/ikrombdm/" target="_blank">
+            <a href="https://github.com
+            /ikrombdm/" target="_blank">
               <img :src="github" alt="">
               <img :src="github" alt="">
             </a>
@@ -280,19 +281,6 @@ export default {
         transition: 0.3s ease;
 
 
-        &:hover {
-          background: #cccccc51;
-          box-shadow: 0 5px 15px #00000022;
-
-          img {
-            // filter: none;
-            margin-right: -100px;
-          }
-
-          img:nth-child(2) {
-            margin-right: 0 !important;
-          }
-        }
 
         &:active {
           transform: scale(0.9) !important;
@@ -311,9 +299,24 @@ export default {
         img:nth-child(2) {
           position: absolute;
           margin-right: 300%;
-          transition: 0.2s ease-out;
+          transition: 0.3s ease-out;
+          transform: scale(0);
+            transform-origin: left;
         }
 
+        &:hover {
+          background: #cccccc51;
+          box-shadow: 0 5px 15px #00000022;
+
+          img {
+            margin-right: -100px;
+          }
+
+          img:nth-child(2) {
+            margin-right: 0 !important;
+            transform: scale(1);
+          }
+        }
       }
 
       li:nth-child(1) {
